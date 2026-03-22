@@ -1,0 +1,41 @@
+[user]
+	name = Your Name
+	email = your-email@example.com
+	signingkey = YOUR_GPG_KEY_ID
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[pull]
+	rebase = true
+[push]
+	followTags = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = nvim
+	pager = delta
+	# sshCommand = ssh -i ~/.ssh/id_ed25519_github
+[init]
+	defaultBranch = main
+	templatedir = /home/your-username/.git-template
+[alias]
+	cr = config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\"
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[submodule]
+	recurse = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+[merge]
+	confictStyle = zdiff3
