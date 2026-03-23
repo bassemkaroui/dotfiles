@@ -1177,7 +1177,7 @@ return {
     end,
     config = function()
       local lsp_server = vim.fn.expand '~/.local/share/openfga-vscode-ext/server/out/server.node.js'
-      local opts = { install_treesitter_grammar = false }
+      local opts = { install_treesitter_grammar = true }
       if vim.fn.filereadable(lsp_server) == 1 then opts.lsp_server = lsp_server end
       require('fga').setup(opts)
     end,
