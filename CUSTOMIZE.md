@@ -4,21 +4,20 @@ This repo uses placeholder values for personal information. To use these dotfile
 
 | Placeholder | Description | Files |
 |-------------|-------------|-------|
-| `Your Name` | Your full name (for git config) | git/.gitconfig, scripts/sanitize-and-sync.sh |
-| `your-email@example.com` | Your email address | git/.gitconfig, scripts/sanitize-and-sync.sh |
-| `YOUR_GPG_KEY_ID` | Your GPG signing key fingerprint | git/.gitconfig, scripts/sanitize-and-sync.sh |
-| `/home/your-username` | Your home directory path | git/.gitconfig, scripts/sanitize-and-sync.sh, zsh/.zshrc |
-| `your-username/.dotfiles` | Your GitHub username (dotfiles repo URL) | README.md, mise/.config/mise/tasks/setup/dotfiles, scripts/sanitize-and-sync.sh |
-| `your-username/kickstart.nvim` | Your GitHub username (nvim config URL) | .gitmodules, scripts/sanitize-and-sync.sh |
-| `your-domain.example.com` | Your domain / dynamic DNS hostname | scripts/sanitize-and-sync.sh, ssh/laptop/.ssh/config |
-| `your-ddns.example.com` | Your secondary DDNS hostname | scripts/sanitize-and-sync.sh, ssh/desktop/.ssh/config |
-| `10.0.0.100` | Your VPN / private network IP | scripts/sanitize-and-sync.sh, ssh/laptop/.ssh/config |
-| `my-desktop` | Your desktop machine hostname | scripts/sanitize-and-sync.sh, ssh/laptop/.ssh/config |
+| `Your Name` | Your full name (for git config) | git/.gitconfig |
+| `your-email@example.com` | Your email address | git/.gitconfig |
+| `YOUR_GPG_KEY_ID` | Your GPG signing key fingerprint | git/.gitconfig |
+| `your-username/.dotfiles` | Your GitHub username (dotfiles repo URL) | README.md, mise/.config/mise/tasks/setup/dotfiles |
+| `your-username/kickstart.nvim` | Your GitHub username (nvim config URL) | .gitmodules |
+| `your-domain.example.com` | Your domain / dynamic DNS hostname | ssh/laptop/.ssh/config |
+| `your-ddns.example.com` | Your secondary DDNS hostname | ssh/desktop/.ssh/config |
+| `10.0.0.100` | Your VPN / private network IP | ssh/laptop/.ssh/config |
+| `my-desktop` | Your desktop machine hostname | ssh/laptop/.ssh/config |
 | `Port 2222` | Your custom SSH port | ssh/laptop/.ssh/config |
 | `Port 2223` | Your custom SSH port | ssh/desktop/.ssh/config |
 | `Port 22` | Your custom SSH port | ssh/desktop/.ssh/config, ssh/laptop/.ssh/config |
 | `Port 22` | Your custom SSH port | ssh/desktop/.ssh/config, ssh/laptop/.ssh/config |
-| `User your-username` | Your SSH username | scripts/sanitize-and-sync.sh, ssh/desktop/.ssh/config, ssh/laptop/.ssh/config |
+| `User your-username` | Your SSH username | ssh/desktop/.ssh/config, ssh/laptop/.ssh/config |
 
 ## Quick Search
 
