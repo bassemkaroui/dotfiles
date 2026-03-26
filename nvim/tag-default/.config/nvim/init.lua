@@ -185,6 +185,8 @@ vim.o.confirm = true
 
 vim.opt.termguicolors = true -- needed for nvim-notify plugin --<CUSTOM CHANGE>
 
+vim.g.ts_install_concurrency = 4 -- limit parallel treesitter parser compilations --<CUSTOM CHANGE>
+
 -- -- Set foldmethod and foldexpr for Treesitter
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
@@ -512,7 +514,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sw', function()
         builtin.grep_string {
           additional_args = function(opts)
-            return { '--follow' } --<CUSTOM CHANGE> searches follow symlinks
+            return { '--hidden', '--glob', '!.git', '--follow' } --<CUSTOM CHANGE> searches hidden files and follows symlinks
           end,
         }
       end, { desc = '[S]earch current [W]ord' })
@@ -520,7 +522,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sg', function()
         builtin.live_grep {
           additional_args = function(opts)
-            return { '--follow' } --<CUSTOM CHANGE> searches follow symlinks
+            return { '--hidden', '--glob', '!.git', '--follow' } --<CUSTOM CHANGE> searches hidden files and follows symlinks
           end,
         }
       end, { desc = '[S]earch by [G]rep' })
